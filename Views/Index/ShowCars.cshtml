@@ -1,0 +1,29 @@
+﻿@using DealershipManagementSystem
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Show Cars .cshtml</title>
+</head>
+<body>
+	<h1>All new cars:</h1>
+	@{
+		GetCarsFromDatabase allCars = new GetCarsFromDatabase();
+		allCars.GetElectricCars();
+
+		foreach (var car in allCars.ElectricCars)
+		{
+			@car.Id<br>
+			@car.Model<br>
+			@car.Manufacturer<br>
+			@car.BodyType<br>
+			@car.Power_hp<br>
+			@car.Battery_kW<br>
+			@car.Range_km<br>
+			@car.MaxSpeed_kmh<br>
+			@car.YearOfIssue<br>
+			@car.IsReserved<br><br>
+		}
+	}
+</body>
+</html>
