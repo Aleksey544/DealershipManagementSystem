@@ -3,27 +3,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Show Cars .cshtml</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Electric cars</title>
+	<link rel="stylesheet" href="~/css/GeneralStyles.css">
+	<link rel="stylesheet" href="~/css/CarCatalog.css">
 </head>
 <body>
-	<h1>All new cars:</h1>
-	@{
-		GetCarsFromDatabase allCars = new GetCarsFromDatabase();
-		allCars.GetElectricCars();
-
-		foreach (var car in allCars.ElectricCars)
-		{
-			@car.Id<br>
-			@car.Model<br>
-			@car.Manufacturer<br>
-			@car.BodyType<br>
-			@car.Power_hp<br>
-			@car.Battery_kW<br>
-			@car.Range_km<br>
-			@car.MaxSpeed_kmh<br>
-			@car.YearOfIssue<br>
-			@car.IsReserved<br><br>
-		}
-	}
+	<div class="cars">
+		<div class="car">
+			<img src="~/images/Hyndai_Kona_Electric.png" />
+			<h2>Hyndai Kona Electric</h2>
+		</div>
+		<div class="car">
+			<img src="~/images/Chevrolet_Bolt_EUV.png" />
+			<h2>Chevrolet Bolt EUV</h2>
+		</div>
+		<div class="car">
+			<img src="~/images/Volkswagen_ID4.png" />
+			<h2>Volkswagen ID.4</h2>
+		</div>
+		<div class="car">
+			<img src="~/images/Volkswagen_EGolf.png" />
+			<h2>Volkswagen E-Golf</h2>
+		</div>
+		<div class="car">
+			<img src="~/images/Hyndai_IONIQ5.png" />
+			<h2>Hyndai IONIQ 5</h2>
+		</div>
+	</div>
 </body>
 </html>
