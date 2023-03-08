@@ -1,6 +1,6 @@
 ﻿using MongoDB.Driver;
 
-namespace DealershipManagementSystem.Data
+namespace DealershipManagementSystem
 {
 	public static class ConnectToMongoDB
 	{

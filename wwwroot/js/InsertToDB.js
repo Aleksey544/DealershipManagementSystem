@@ -2,7 +2,7 @@
 
 db.electricCars.insertOne(
     {
-        _id: 1,
+        _id: 0,
         Model: "Hyundai Kona Electric",
         Acceleration: "7.9 sec (0 -> 100 km/h)",
         TopSpeed: "167 km/h",
@@ -12,7 +12,7 @@ db.electricCars.insertOne(
         Drive: "Front",
         NominalCapacity: "67.5 kWh",
         UseableCapacity: "64 kWh",
-        BattaryType: "Lithium-ion",
+        BatteryType: "Lithium-ion",
         Architecture: "400 V",
         NominalVoltage: "356 V",
         ChargePort: "Type 2",

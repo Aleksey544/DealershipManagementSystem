@@ -1,5 +1,5 @@
 ﻿.car-info h1 {
-    font-size: 2.7em;
+    font-size: 2.8em;
     margin-top: 0.5em;
     text-align: center;
 }
@@ -19,27 +19,34 @@
     margin: 1.5em;
 }
 
+.car-images img {
+    width: 100%;
+}
+
 .characteristics {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1.07fr 1fr;
     margin: 1.5em;
-    margin-block: 2.3em;
 }
 
 .performance-battery {
-    margin-left: 2.3em;
+    margin-left: 2em;
 }
 
 .online-consultation-button {
-    margin-top: 1em;
     text-align: center;
     font-size: 2em;
 }
 
 .battery {
-    margin-block: 2.3em;
+    margin-block: 1.5em;
 }
 
-.car-images img {
-    width: 100%;
+.characteristic-value {
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-charging, .dimensions, .miscellaneous {
+    margin-right: 3em;
 }

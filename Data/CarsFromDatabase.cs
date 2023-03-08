@@ -1,29 +1,21 @@
 ﻿using MongoDB.Driver;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Net.Http;
-using System.Threading.Tasks;
-using MongoDB.Bson;
-using DealershipManagementSystem.Data;
 
 namespace DealershipManagementSystem
 {
-	public class GetCarsFromDatabase
+	public class CarsFromDatabase
 	{
 		private MongoClient _connection;
 		private IMongoDatabase _database;
 
-		public List<ElectricCarCharacteristics> ElectricCars { get; private set; } =
+		public List<ElectricCarCharacteristics> Characteristics { get; private set; } =
 			new List<ElectricCarCharacteristics>();
 
-		public GetCarsFromDatabase()
+		public CarsFromDatabase()
 		{
 			_connection = ConnectToMongoDB.Connection;
-			_database = _connection.GetDatabase("CarWarehouseDB");
+			_database = _connection.GetDatabase("CarShowroomDB");
 		}
 
 		public void GetElectricCars()
@@ -31,7 +23,7 @@ namespace DealershipManagementSystem
 			IMongoCollection<ElectricCarCharacteristics> collection =
 				_database.GetCollection<ElectricCarCharacteristics>("electricCars");
 
-			ElectricCars = collection.Find(_ => true).ToList();
+			Characteristics = collection.Find(_ => true).ToList();
 		}
 	}
 }

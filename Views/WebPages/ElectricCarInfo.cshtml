@@ -1,0 +1,221 @@
+﻿@using DealershipManagementSystem
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Hyundai Kona Electric</title>
+	<link rel="stylesheet" href="~/css/GeneralStyle.css">
+	<link rel="stylesheet" href="~/css/HeaderAndFooter.css">
+	<link rel="stylesheet" href="~/css/ElectricCarCharacteristics.css">
+</head>
+<body>
+	@{
+		int i = 0;
+		CarsFromDatabase car = new CarsFromDatabase();
+		car.GetElectricCars();
+
+		<div class="car-info">
+			<h1>Hyundai Kona Electric</h1>
+			<div class="image-characteristics">
+				<div class="car-images">
+					<img src="~/images/Hyundai Kona Electric/Car Image 1.jpg" />
+				</div>
+				<div class="performance-battery">
+					<div class="performance">
+						<h2>Performance</h2>
+						<div class="characteristic-value">
+							<h3>Acceleration</h3>
+							<h3>@car.Characteristics[i].Acceleration</h3>
+						</div>
+						<div class="characteristic-value">
+							<h3>Top Speed</h3>
+							<h3>@car.Characteristics[i].TopSpeed</h3>
+						</div>
+						<div class="characteristic-value">
+							<h3>Electric Range</h3>
+							<h3>@car.Characteristics[i].ElectricRange</h3>
+						</div>
+						<div class="characteristic-value">
+							<h3>Total Power</h3>
+							<h3>@car.Characteristics[i].TotalPower</h3>
+						</div>
+						<div class="characteristic-value">
+							<h3>Total Torgue</h3>
+							<h3>@car.Characteristics[i].TotalTorgue</h3>
+						</div>
+						<div class="characteristic-value">
+							<h3>Drive</h3>
+							<h3>@car.Characteristics[i].Drive</h3>
+						</div>
+					</div>
+					<div class="battery">
+						<h2>Battery</h2>
+						<div class="characteristic-value">
+							<h3>Nominal Capacity</h3>
+							<h3>@car.Characteristics[i].NominalCapacity</h3>
+						</div>
+						<div class="characteristic-value">
+							<h3>Useable Capacity</h3>
+							<h3>@car.Characteristics[i].UseableCapacity</h3>
+						</div>
+						<div class="characteristic-value">
+							<h3>Battery Type</h3>
+							<h3>@car.Characteristics[i].BatteryType</h3>
+						</div>
+						<div class="characteristic-value">
+							<h3>Architecture</h3>
+							<h3>@car.Characteristics[i].Architecture</h3>
+						</div>
+						<div class="characteristic-value">
+							<h3>Nominal Voltage</h3>
+							<h3>@car.Characteristics[i].NominalVoltage</h3>
+						</div>
+					</div>
+					<div class="online-consultation-button">
+						<a href="#">Online Consultation</a>
+					</div>
+				</div>
+			</div>
+			<div class="characteristics">
+				<div class="home-charging">
+					<h2>Home Charging</h2>
+					<div class="characteristic-value">
+						<h3>Charge Port</h3>
+						<h3>@car.Characteristics[i].ChargePort</h3>
+					</div>
+					<div class="characteristic-value">
+						<h3>Port Location</h3>
+						<h3>@car.Characteristics[i].PortLocation</h3>
+					</div>
+					<div class="characteristic-value">
+						<h3>Charge Power</h3>
+						<h3>@car.Characteristics[i].ChargePower</h3>
+					</div>
+					<div class="characteristic-value">
+						<h3>Charge Time</h3>
+						<h3>@car.Characteristics[i].ChargeTime</h3>
+					</div>
+					<div class="characteristic-value">
+						<h3>Charge Speed</h3>
+						<h3>@car.Characteristics[i].ChargeSpeed</h3>
+					</div>
+				</div>
+				<div class="fast-charging">
+					<h2>Fast Charging</h2>
+					<div class="characteristic-value">
+						<h3>Fastcharge Port</h3>
+						<h3>@car.Characteristics[i].FastchargePort</h3>
+					</div>
+						<div class="characteristic-value">
+						<h3>FC Port Location</h3>
+						<h3>@car.Characteristics[i].FCPortLocation</h3>
+					</div>
+					<div class="characteristic-value">
+						<h3>Fastcharge Power (max)</h3>
+						<h3>@car.Characteristics[i].FastchargePowerMax</h3>
+					</div>
+					<div class="characteristic-value">
+						<h3>Fastcharge Time</h3>
+						<h3>@car.Characteristics[i].FastchargeTime</h3>
+					</div>
+						<div class="characteristic-value">
+						<h3>Fastcharge Speed</h3>
+						<h3>@car.Characteristics[i].FastchargeSpeed</h3>
+					</div>
+				</div>
+			</div>
+			<div class="characteristics">
+				<div class="dimensions">
+					<h2>Dimensions</h2>
+					<div class="characteristic-value">
+						<h3>Length</h3>
+						<h3>@car.Characteristics[i].Length</h3>
+					</div>
+					<div class="characteristic-value">
+						<h3>Width</h3>
+						<h3>@car.Characteristics[i].Width</h3>
+					</div>
+					<div class="characteristic-value">
+						<h3>Height</h3>
+						<h3>@car.Characteristics[i].Height</h3>
+					</div>
+					<div class="characteristic-value">
+						<h3>Wheelbase</h3>
+						<h3>@car.Characteristics[i].Wheelbase</h3>
+					</div>
+					<div class="characteristic-value">
+						<h3>Clearance</h3>
+						<h3>@car.Characteristics[i].Clearance</h3>
+					</div>
+				</div>
+				<div class="weight">
+					<h2>Weight</h2>
+					<div class="characteristic-value">
+						<h3>Weight Unladen</h3>
+						<h3>@car.Characteristics[i].WeightUnladen</h3>
+					</div>
+					<div class="characteristic-value">
+						<h3>Gross Vehicle Weight</h3>
+						<h3>@car.Characteristics[i].GrossVehicleWeight</h3>
+					</div>
+					<div class="characteristic-value">
+						<h3>Max Payload</h3>
+						<h3>@car.Characteristics[i].MaxPayload</h3>
+					</div>
+					<div class="characteristic-value">
+						<h3>Cargo Volume</h3>
+						<h3>@car.Characteristics[i].CargoVolume</h3>
+					</div>
+					<div class="characteristic-value">
+						<h3>Cargo Volume (max)</h3>
+						<h3>@car.Characteristics[i].CargoVolumeMax</h3>
+					</div>
+				</div>
+			</div>
+			<div class="characteristics">
+				<div class="miscellaneous">
+					<h2>Miscellaneous</h2>
+					<div class="characteristic-value">
+						<h3>Transmission</h3>
+						<h3>@car.Characteristics[i].Transmission</h3>
+					</div>
+					<div class="characteristic-value">
+						<h3>Gear Box</h3>
+						<h3>@car.Characteristics[i].GearBox</h3>
+					</div>
+					<div class="characteristic-value">
+						<h3>Seats</h3>
+						<h3>@car.Characteristics[i].Seats</h3>
+					</div>
+					<div class="characteristic-value">
+						<h3>Car Body</h3>
+						<h3>@car.Characteristics[i].CarBody</h3>
+					</div>
+				</div>
+				<div class="purshase">
+					<h2>Purchase</h2>
+					<div class="characteristic-value">
+						<h3>Price</h3>
+						<h3>@car.Characteristics[i].Price</h3>
+					</div>
+					<div class="characteristic-value">
+						<h3>Year Of Issue</h3>
+						<h3>@car.Characteristics[i].YearOfIssue</h3>
+					</div>
+					<div class="characteristic-value">
+						<h3>Manufacturer</h3>
+						<h3>@car.Characteristics[i].Manufacturer</h3>
+					</div>
+					<div class="characteristic-value">
+						<h3>Order Status</h3>
+						<h3>@car.Characteristics[i].OrderStatus</h3>
+					</div
+				</div>
+			</div>
+		</div>
+	}
+</body>
+</html>
