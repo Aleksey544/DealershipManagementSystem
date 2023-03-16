@@ -14,6 +14,7 @@
 		public string NominalCapacity { get; private set; }
 		public string UseableCapacity { get; private set; }
 		public string BatteryType { get; private set; }
+		public string NumberOfCells { get; private set; }
 		public string Architecture { get; private set; }
 		public string NominalVoltage { get; private set; }
 		public string ChargePort { get; private set; }

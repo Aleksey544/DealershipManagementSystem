@@ -13,24 +13,34 @@
     margin-block: 0.1em;
 }
 
+/*.car-info hr {
+    border: none;
+    color: #323637;
+    background-color: #5e5e5e;
+    height: 1px;
+    margin-inline: 2em;
+}*/
+
 .image-characteristics {
     display: grid;
     grid-template-columns: 1.75fr 1fr;
     margin: 1.5em;
 }
 
-.car-images img {
-    width: 100%;
-}
-
-.characteristics {
-    display: grid;
-    grid-template-columns: 1.07fr 1fr;
+.car-images {
+    text-align: center;
     margin: 1.5em;
 }
 
-.performance-battery {
-    margin-left: 2em;
+.car-images img {
+    width: 70%;
+}
+
+.characteristics-grid {
+    display: grid;
+    grid-template-columns: 1.07fr 1fr;
+    margin-inline: 2em;
+    margin-block: 3em;
 }
 
 .online-consultation-button {
@@ -38,15 +48,20 @@
     font-size: 2em;
 }
 
-.battery {
-    margin-block: 1.5em;
-}
-
 .characteristic-value {
     display: flex;
     justify-content: space-between;
+    padding-inline: 0.7em;
+    padding-block: 0.3em;
 }
 
-.home-charging, .dimensions, .miscellaneous {
+.bg-grey {
+    background-color: #323637;
+}
+
+.performance,
+.home-charging,
+.dimensions,
+.miscellaneous {
     margin-right: 3em;
 }

@@ -13,6 +13,7 @@ db.electricCars.insertOne(
         NominalCapacity: "67.5 kWh",
         UseableCapacity: "64 kWh",
         BatteryType: "Lithium-ion",
+        NumberOfCells: "4416",
         Architecture: "400 V",
         NominalVoltage: "356 V",
         ChargePort: "Type 2",
