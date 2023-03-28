@@ -1,7 +1,9 @@
-﻿namespace DealershipManagementSystem
+﻿using SharpCompress.Common;
+
+namespace DealershipManagementSystem
 {
-    //"ElecticCars" MongoDB collection structure (.bson file)
-    public class ElectricCarCharacteristics
+	// Entity model of the documents of the "electricCars" collection from the "CarShowroomDB"
+	public class ElectricCarCharacteristics
     {
 		public int Id { get; private set; }
         public string Model { get; private set; }

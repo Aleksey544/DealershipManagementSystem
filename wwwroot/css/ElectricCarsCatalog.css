@@ -1,35 +1,41 @@
 ﻿.cars {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr;
 }
 
 .car {
-    margin: 2.2em;
-    margin-top: 2.8em;
+    margin: 1.8em;
+    text-align: center;
 }
 
 .car img {
-    width: 100%;
+    width: 95%;
+}
+
+.car a {
+    text-decoration: none;
+}
+
+.car a:hover {
+    text-shadow: 0 0 0.6em #ff0000;
+}
+
+.brief-characteristic-value
+{
+    display: flex;
+    justify-content: space-between;
 }
 
 .car h2 {
-    text-align: center;
-    font-size: 168%;
-    margin-top: 0.75em;
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 2.1em;
+    margin-block: 0.6em;
 }
 
-@media (max-width: 800px) {
-    .cars {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .cars {
-        grid-template-columns: 1fr;
-    }
-
-    .car {
-        margin-inline: 0.5em;
-    }
+.brief-characteristic-value h3 {
+    margin-block: 0.2em;
+    font-family: Montserrat;
+    font-size: 1.45em;
+    font-weight: 500;
 }

@@ -1,0 +1,49 @@
+﻿@* Web page of the catalog of all electric cars from the "CarShowroomDB" *@
+@using DealershipManagementSystem
+
+@{
+	Layout = "_Layout";
+	DataFromCarShowroomDB.GetElectricCars();
+	string imagePath = "";
+	string carModelLink = "";
+}
+
+<div class="cars">
+	@{
+		for (int i = 0; i < DataFromCarShowroomDB.ElectricCarsList.Count; i++)
+		{
+			imagePath = $"~/images/{DataFromCarShowroomDB.ElectricCarsList[i].Model}/Car In Catalog.png";
+			carModelLink = "https://localhost:44350/CarShowroom/ElectricCarInfo/" +
+			DataFromCarShowroomDB.ElectricCarsList[i].Model.Replace(" ", "%20");
+
+			<div class="car">
+				<a href=@carModelLink>
+					<img src="@Url.Content(imagePath)" />
+					<h2>@DataFromCarShowroomDB.ElectricCarsList[i].Model</h2>
+				</a>
+				<div class="brief-characteristics">
+					<div class="brief-characteristic-value">
+						<h3>Useable Battery</h3>
+						<h3>@DataFromCarShowroomDB.ElectricCarsList[i].UseableCapacity</h3>
+					</div>
+					<div class="brief-characteristic-value">
+						<h3>Electric Range</h3>
+						<h3>@DataFromCarShowroomDB.ElectricCarsList[i].ElectricRange</h3>
+					</div>
+					<div class="brief-characteristic-value">
+						<h3>Total Power</h3>
+						<h3>@DataFromCarShowroomDB.ElectricCarsList[i].TotalPower</h3>
+					</div>
+					<div class="brief-characteristic-value">
+						<h3>Price</h3>
+						<h3>@DataFromCarShowroomDB.ElectricCarsList[i].Price</h3>
+					</div>
+					<div class="brief-characteristic-value">
+						<h3>Order Status</h3>
+						<h3>@DataFromCarShowroomDB.ElectricCarsList[i].OrderStatus</h3>
+					</div>
+				</div>
+			</div>
+		}
+	}
+</div>

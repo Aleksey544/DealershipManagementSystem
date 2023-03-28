@@ -1,30 +1,24 @@
-﻿.car-info h1 {
+﻿.car-info h1,
+.car-info h2,
+.car-info h3 {
+    font-family: Montserrat;
+    font-weight: 600;
+}
+
+.car-info h1 {
     font-size: 2.8em;
-    margin-top: 0.5em;
+    font-style: italic;
     text-align: center;
 }
+
 .car-info h2 {
     font-size: 2em;
-    margin-bottom: 0.3em;
+    margin-bottom: 0.4em;
 }
 
 .car-info h3 {
-    font-size: 1.3em;
-    margin-block: 0.1em;
-}
-
-/*.car-info hr {
-    border: none;
-    color: #323637;
-    background-color: #5e5e5e;
-    height: 1px;
-    margin-inline: 2em;
-}*/
-
-.image-characteristics {
-    display: grid;
-    grid-template-columns: 1.75fr 1fr;
-    margin: 1.5em;
+    font-size: 1.4em;
+    font-weight: 500;
 }
 
 .car-images {
@@ -39,20 +33,15 @@
 .characteristics-grid {
     display: grid;
     grid-template-columns: 1.07fr 1fr;
-    margin-inline: 2em;
-    margin-block: 3em;
-}
-
-.online-consultation-button {
-    text-align: center;
-    font-size: 2em;
+    margin-inline: 1.8em;
+    margin-block: 2.6em;
 }
 
 .characteristic-value {
     display: flex;
     justify-content: space-between;
     padding-inline: 0.7em;
-    padding-block: 0.3em;
+    padding-block: 0.35em;
 }
 
 .bg-grey {
@@ -64,4 +53,9 @@
 .dimensions,
 .miscellaneous {
     margin-right: 3em;
+}
+
+.online-consultation-button {
+    text-align: center;
+    font-size: 2em;
 }
