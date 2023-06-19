@@ -1,6 +1,4 @@
-﻿using SharpCompress.Common;
-
-namespace DealershipManagementSystem
+﻿namespace DealershipManagementSystem
 {
 	// Entity model of the documents of the "electricCars" collection from the "CarShowroomDB"
 	public class ElectricCarCharacteristics
@@ -43,10 +41,10 @@ namespace DealershipManagementSystem
 		public string GearBox { get; private set; }
 		public string Seats { get; private set; }
 		public string CarBody { get; private set; }
-		public int YearOfIssue { get; private set; }
+		public string YearOfIssue { get; private set; }
 		public string Price { get; private set; }
 		public string Manufacturer { get; private set; }
-		public string OrderStatus { get; private set; }
-		public bool IsReserved { get; private set; }
+		public string CarStatus { get; private set; }
+		public string IsReserved { get; private set; }
 	}
 }

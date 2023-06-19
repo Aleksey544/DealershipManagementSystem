@@ -4,14 +4,14 @@ using System.Linq;
 
 namespace DealershipManagementSystem
 {
-	// Getting data from different collections of the "CarShowroomDB"
-	public static class DataFromCarShowroomDB
+	// Getting data from "electricCars" collection of the "CarShowroomDB"
+	public static class ElectricCarsFromDB
 	{
 		public static List<ElectricCarCharacteristics> ElectricCarsList { get; private set; }
 
-		static DataFromCarShowroomDB()
+		static ElectricCarsFromDB()
 		{
-			ElectricCarsList= new List<ElectricCarCharacteristics>();
+			ElectricCarsList = new List<ElectricCarCharacteristics>();
 		}
 
 		// Getting data from "electricCars" collection

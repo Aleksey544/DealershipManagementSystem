@@ -1,29 +1,36 @@
-﻿.navbar {
+﻿.navigation {
+    position: absolute;
     display: flex;
     justify-content: space-between;
-    background-color: #20353E;
-    margin-bottom: 1.4em;
+    align-items: center;
+    width: 87%;
+    margin: 0 auto;
+    top: 7%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.nav-list {
+.menu {
     display: flex;
-}
-
-.nav-list a,
-.logo a {
-    display: block;
-    padding: 0.75em;
-    background-color: #20353E;
-    font-size: 1.6em;
-    font-family: 'Century Gothic';
+    list-style: none;
     text-decoration: none;
+}
+
+.menu li a {
+    font-family: 'Ubuntu', sans-serif;
     color: white;
+    text-decoration: none;
+    margin-inline: 0.9em;
+    font-size: 1.55em;
+    transition: .3s;
 }
 
-.logo a {
-    font-style: italic;
+.menu li a:hover {
+    color: aqua;
 }
 
-.nav-list a:hover {
-    background-color: #094242;
+.main-logo {
+    font-size: 1.75em;
+    font-family: 'Quicksand', sans-serif;
+    color: aqua;
 }

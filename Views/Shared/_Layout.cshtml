@@ -10,22 +10,24 @@ header and footer of the site, as well as plug-in styles *@
 	<title>@ViewBag.Title</title>
 	<link rel="stylesheet" href="~/css/GeneralStyle.css">
 	<link rel="stylesheet" href="~/css/NavigationBar.css">
+	<link rel="stylesheet" href="~/css/Index.css">
 	<link rel="stylesheet" href="~/css/ElectricCarsCatalog.css">
 	<link rel="stylesheet" href="~/css/ElectricCarInfo.css">
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quick:600&display=swap">
 </head>
 <body>
-	<div class="navbar">
-		<div class="logo">
-			<a href="#">Dealership Management System</a>
-		</div>
-		<div class="nav-list">
-			<a href="#">Home</a>
-			<a href="https://localhost:44350/CarShowroom/ElectricCarsCatalog">Electric cars</a>
-			<a href="#">About</a>
-			<a href="#">Contact</a>
-			<a href="#">For managers</a>
-		</div>
+	<div class="navigation">
+		<div class="main-logo">Dealership Management System</div>
+		<ul class="menu">
+			<li><a href="https://localhost:44350/CarShowroom/Index">Home</a></li>
+			<li><a href="https://localhost:44350/CarShowroom/ElectricCarsCatalog">Electric cars</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Contact</a></li>
+			<li><a href="#">Login</a></li>
+		</ul>
 	</div>
-    @RenderBody()
+	@RenderBody()
 </body>
 </html>

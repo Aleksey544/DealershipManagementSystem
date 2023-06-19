@@ -3,16 +3,16 @@
 
 @{
 	Layout = "_Layout";
-	DataFromCarShowroomDB.GetElectricCars();
+	ElectricCarsFromDB.GetElectricCars();
 
-	for (int i = 0; i < DataFromCarShowroomDB.ElectricCarsList.Count; i++)
+	for (int i = 0; i < ElectricCarsFromDB.ElectricCarsList.Count; i++)
 	{
-		if (ViewBag.Title == DataFromCarShowroomDB.ElectricCarsList[i].Model)
+		if (ViewBag.Title == ElectricCarsFromDB.ElectricCarsList[i].Model)
 		{
-			string imagePath = $"~/images/{DataFromCarShowroomDB.ElectricCarsList[i].Model}/Car Image 1.jpg";
+			string imagePath = $"~/images/{ElectricCarsFromDB.ElectricCarsList[i].Model}/Car Image 1.jpg";
 
 			<div class="car-info">
-				<h1>@DataFromCarShowroomDB.ElectricCarsList[i].Model</h1>
+				<h1>@ElectricCarsFromDB.ElectricCarsList[i].Model</h1>
 				<div class="car-images">
 					<img src="@Url.Content(imagePath)" />
 				</div>
@@ -21,54 +21,54 @@
 						<h2>Performance</h2>
 						<div class="characteristic-value bg-grey">
 							<h3 class="bg-grey">Acceleration</h3>
-							<h3 class="bg-grey">@DataFromCarShowroomDB.ElectricCarsList[i].Acceleration</h3>
+							<h3 class="bg-grey">@ElectricCarsFromDB.ElectricCarsList[i].Acceleration</h3>
 						</div>
 						<div class="characteristic-value">
 							<h3>Top Speed</h3>
-							<h3>@DataFromCarShowroomDB.ElectricCarsList[i].TopSpeed</h3>
+							<h3>@ElectricCarsFromDB.ElectricCarsList[i].TopSpeed</h3>
 						</div>
 						<div class="characteristic-value bg-grey">
 							<h3 class="bg-grey">Electric Range</h3>
-							<h3 class="bg-grey">@DataFromCarShowroomDB.ElectricCarsList[i].ElectricRange</h3>
+							<h3 class="bg-grey">@ElectricCarsFromDB.ElectricCarsList[i].ElectricRange</h3>
 						</div>
 						<div class="characteristic-value">
 							<h3>Total Power</h3>
-							<h3>@DataFromCarShowroomDB.ElectricCarsList[i].TotalPower</h3>
+							<h3>@ElectricCarsFromDB.ElectricCarsList[i].TotalPower</h3>
 						</div>
 						<div class="characteristic-value bg-grey">
 							<h3 class="bg-grey">Total Torgue</h3>
-							<h3 class="bg-grey">@DataFromCarShowroomDB.ElectricCarsList[i].TotalTorgue</h3>
+							<h3 class="bg-grey">@ElectricCarsFromDB.ElectricCarsList[i].TotalTorgue</h3>
 						</div>
 						<div class="characteristic-value">
 							<h3>Drive</h3>
-							<h3>@DataFromCarShowroomDB.ElectricCarsList[i].Drive</h3>
+							<h3>@ElectricCarsFromDB.ElectricCarsList[i].Drive</h3>
 						</div>
 					</div>
 					<div class="battery">
 						<h2>Battery</h2>
 						<div class="characteristic-value bg-grey">
 							<h3 class="bg-grey">Nominal Capacity</h3>
-							<h3 class="bg-grey">@DataFromCarShowroomDB.ElectricCarsList[i].NominalCapacity</h3>
+							<h3 class="bg-grey">@ElectricCarsFromDB.ElectricCarsList[i].NominalCapacity</h3>
 						</div>
 						<div class="characteristic-value">
 							<h3>Useable Capacity</h3>
-							<h3>@DataFromCarShowroomDB.ElectricCarsList[i].UseableCapacity</h3>
+							<h3>@ElectricCarsFromDB.ElectricCarsList[i].UseableCapacity</h3>
 						</div>
 						<div class="characteristic-value bg-grey">
 							<h3 class="bg-grey">Battery Type</h3>
-							<h3 class="bg-grey">@DataFromCarShowroomDB.ElectricCarsList[i].BatteryType</h3>
+							<h3 class="bg-grey">@ElectricCarsFromDB.ElectricCarsList[i].BatteryType</h3>
 						</div>
 						<div class="characteristic-value">
 							<h3>Number Of Cells</h3>
-							<h3>@DataFromCarShowroomDB.ElectricCarsList[i].NumberOfCells</h3>
+							<h3>@ElectricCarsFromDB.ElectricCarsList[i].NumberOfCells</h3>
 						</div>
 						<div class="characteristic-value bg-grey">
 							<h3 class="bg-grey">Architecture</h3>
-							<h3 class="bg-grey">@DataFromCarShowroomDB.ElectricCarsList[i].Architecture</h3>
+							<h3 class="bg-grey">@ElectricCarsFromDB.ElectricCarsList[i].Architecture</h3>
 						</div>
 						<div class="characteristic-value">
 							<h3>Nominal Voltage</h3>
-							<h3>@DataFromCarShowroomDB.ElectricCarsList[i].NominalVoltage</h3>
+							<h3>@ElectricCarsFromDB.ElectricCarsList[i].NominalVoltage</h3>
 						</div>
 					</div>
 				</div>
@@ -77,46 +77,46 @@
 						<h2>Home Charging</h2>
 						<div class="characteristic-value bg-grey">
 							<h3 class="bg-grey">Charge Port</h3>
-							<h3 class="bg-grey">@DataFromCarShowroomDB.ElectricCarsList[i].ChargePort</h3>
+							<h3 class="bg-grey">@ElectricCarsFromDB.ElectricCarsList[i].ChargePort</h3>
 						</div>
 						<div class="characteristic-value">
 							<h3>Port Location</h3>
-							<h3>@DataFromCarShowroomDB.ElectricCarsList[i].PortLocation</h3>
+							<h3>@ElectricCarsFromDB.ElectricCarsList[i].PortLocation</h3>
 						</div>
 						<div class="characteristic-value bg-grey">
 							<h3 class="bg-grey">Charge Power</h3>
-							<h3 class="bg-grey">@DataFromCarShowroomDB.ElectricCarsList[i].ChargePower</h3>
+							<h3 class="bg-grey">@ElectricCarsFromDB.ElectricCarsList[i].ChargePower</h3>
 						</div>
 						<div class="characteristic-value">
 							<h3>Charge Time</h3>
-							<h3>@DataFromCarShowroomDB.ElectricCarsList[i].ChargeTime</h3>
+							<h3>@ElectricCarsFromDB.ElectricCarsList[i].ChargeTime</h3>
 						</div>
 						<div class="characteristic-value bg-grey">
 							<h3 class="bg-grey">Charge Speed</h3>
-							<h3 class="bg-grey">@DataFromCarShowroomDB.ElectricCarsList[i].ChargeSpeed</h3>
+							<h3 class="bg-grey">@ElectricCarsFromDB.ElectricCarsList[i].ChargeSpeed</h3>
 						</div>
 					</div>
 					<div class="fast-charging">
 						<h2>Fast Charging</h2>
 						<div class="characteristic-value bg-grey">
 							<h3 class="bg-grey">Fastcharge Port</h3>
-							<h3 class="bg-grey">@DataFromCarShowroomDB.ElectricCarsList[i].FastchargePort</h3>
+							<h3 class="bg-grey">@ElectricCarsFromDB.ElectricCarsList[i].FastchargePort</h3>
 						</div>
 						<div class="characteristic-value">
 							<h3>FC Port Location</h3>
-							<h3>@DataFromCarShowroomDB.ElectricCarsList[i].FCPortLocation</h3>
+							<h3>@ElectricCarsFromDB.ElectricCarsList[i].FCPortLocation</h3>
 						</div>
 						<div class="characteristic-value bg-grey">
 							<h3 class="bg-grey">Fastcharge Power (max)</h3>
-							<h3 class="bg-grey">@DataFromCarShowroomDB.ElectricCarsList[i].FastchargePowerMax</h3>
+							<h3 class="bg-grey">@ElectricCarsFromDB.ElectricCarsList[i].FastchargePowerMax</h3>
 						</div>
 						<div class="characteristic-value">
 							<h3>Fastcharge Time</h3>
-							<h3>@DataFromCarShowroomDB.ElectricCarsList[i].FastchargeTime</h3>
+							<h3>@ElectricCarsFromDB.ElectricCarsList[i].FastchargeTime</h3>
 						</div>
 						<div class="characteristic-value bg-grey">
 							<h3 class="bg-grey">Fastcharge Speed</h3>
-							<h3 class="bg-grey">@DataFromCarShowroomDB.ElectricCarsList[i].FastchargeSpeed</h3>
+							<h3 class="bg-grey">@ElectricCarsFromDB.ElectricCarsList[i].FastchargeSpeed</h3>
 						</div>
 					</div>
 				</div>
@@ -125,46 +125,46 @@
 						<h2>Dimensions</h2>
 						<div class="characteristic-value bg-grey">
 							<h3 class="bg-grey">Length</h3>
-							<h3 class="bg-grey">@DataFromCarShowroomDB.ElectricCarsList[i].Length</h3>
+							<h3 class="bg-grey">@ElectricCarsFromDB.ElectricCarsList[i].Length</h3>
 						</div>
 						<div class="characteristic-value">
 							<h3>Width</h3>
-							<h3>@DataFromCarShowroomDB.ElectricCarsList[i].Width</h3>
+							<h3>@ElectricCarsFromDB.ElectricCarsList[i].Width</h3>
 						</div>
 						<div class="characteristic-value bg-grey">
 							<h3 class="bg-grey">Height</h3>
-							<h3 class="bg-grey">@DataFromCarShowroomDB.ElectricCarsList[i].Height</h3>
+							<h3 class="bg-grey">@ElectricCarsFromDB.ElectricCarsList[i].Height</h3>
 						</div>
 						<div class="characteristic-value">
 							<h3>Wheelbase</h3>
-							<h3>@DataFromCarShowroomDB.ElectricCarsList[i].Wheelbase</h3>
+							<h3>@ElectricCarsFromDB.ElectricCarsList[i].Wheelbase</h3>
 						</div>
 						<div class="characteristic-value bg-grey">
 							<h3 class="bg-grey">Clearance</h3>
-							<h3 class="bg-grey">@DataFromCarShowroomDB.ElectricCarsList[i].Clearance</h3>
+							<h3 class="bg-grey">@ElectricCarsFromDB.ElectricCarsList[i].Clearance</h3>
 						</div>
 					</div>
 					<div class="weight">
 						<h2>Weight</h2>
 						<div class="characteristic-value bg-grey">
 							<h3 class="bg-grey">Weight Unladen</h3>
-							<h3 class="bg-grey">@DataFromCarShowroomDB.ElectricCarsList[i].WeightUnladen</h3>
+							<h3 class="bg-grey">@ElectricCarsFromDB.ElectricCarsList[i].WeightUnladen</h3>
 						</div>
 						<div class="characteristic-value">
 							<h3>Gross Vehicle Weight</h3>
-							<h3>@DataFromCarShowroomDB.ElectricCarsList[i].GrossVehicleWeight</h3>
+							<h3>@ElectricCarsFromDB.ElectricCarsList[i].GrossVehicleWeight</h3>
 						</div>
 						<div class="characteristic-value bg-grey">
 							<h3 class="bg-grey">Max Payload</h3>
-							<h3 class="bg-grey">@DataFromCarShowroomDB.ElectricCarsList[i].MaxPayload</h3>
+							<h3 class="bg-grey">@ElectricCarsFromDB.ElectricCarsList[i].MaxPayload</h3>
 						</div>
 						<div class="characteristic-value">
 							<h3>Cargo Volume</h3>
-							<h3>@DataFromCarShowroomDB.ElectricCarsList[i].CargoVolume</h3>
+							<h3>@ElectricCarsFromDB.ElectricCarsList[i].CargoVolume</h3>
 						</div>
 						<div class="characteristic-value bg-grey">
 							<h3 class="bg-grey">Cargo Volume (max)</h3>
-							<h3 class="bg-grey">@DataFromCarShowroomDB.ElectricCarsList[i].CargoVolumeMax</h3>
+							<h3 class="bg-grey">@ElectricCarsFromDB.ElectricCarsList[i].CargoVolumeMax</h3>
 						</div>
 					</div>
 				</div>
@@ -173,38 +173,38 @@
 						<h2>Miscellaneous</h2>
 						<div class="characteristic-value bg-grey">
 							<h3 class="bg-grey">Transmission</h3>
-							<h3 class="bg-grey">@DataFromCarShowroomDB.ElectricCarsList[i].Transmission</h3>
+							<h3 class="bg-grey">@ElectricCarsFromDB.ElectricCarsList[i].Transmission</h3>
 						</div>
 						<div class="characteristic-value">
 							<h3>Gear Box</h3>
-							<h3>@DataFromCarShowroomDB.ElectricCarsList[i].GearBox</h3>
+							<h3>@ElectricCarsFromDB.ElectricCarsList[i].GearBox</h3>
 						</div>
 						<div class="characteristic-value bg-grey">
 							<h3 class="bg-grey">Seats</h3>
-							<h3 class="bg-grey">@DataFromCarShowroomDB.ElectricCarsList[i].Seats</h3>
+							<h3 class="bg-grey">@ElectricCarsFromDB.ElectricCarsList[i].Seats</h3>
 						</div>
 						<div class="characteristic-value">
 							<h3>Car Body</h3>
-							<h3>@DataFromCarShowroomDB.ElectricCarsList[i].CarBody</h3>
+							<h3>@ElectricCarsFromDB.ElectricCarsList[i].CarBody</h3>
 						</div>
 					</div>
 					<div class="purshase">
 						<h2>Purchase</h2>
 						<div class="characteristic-value bg-grey">
 							<h3 class="bg-grey">Price</h3>
-							<h3 class="bg-grey">@DataFromCarShowroomDB.ElectricCarsList[i].Price</h3>
+							<h3 class="bg-grey">@ElectricCarsFromDB.ElectricCarsList[i].Price</h3>
 						</div>
 						<div class="characteristic-value">
 							<h3>Year Of Issue</h3>
-							<h3>@DataFromCarShowroomDB.ElectricCarsList[i].YearOfIssue</h3>
+							<h3>@ElectricCarsFromDB.ElectricCarsList[i].YearOfIssue</h3>
 						</div>
 						<div class="characteristic-value bg-grey">
 							<h3 class="bg-grey">Manufacturer</h3>
-							<h3 class="bg-grey">@DataFromCarShowroomDB.ElectricCarsList[i].Manufacturer</h3>
+							<h3 class="bg-grey">@ElectricCarsFromDB.ElectricCarsList[i].Manufacturer</h3>
 						</div>
 						<div class="characteristic-value">
-							<h3>Order Status</h3>
-							<h3>@DataFromCarShowroomDB.ElectricCarsList[i].OrderStatus</h3>
+							<h3>Car Status</h3>
+							<h3>@ElectricCarsFromDB.ElectricCarsList[i].CarStatus</h3>
 						</div>
 					</div>
 				</div>
